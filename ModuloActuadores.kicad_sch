@@ -1,0 +1,2269 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "67316486-a4d6-4a4a-a560-d8d2be77077b")
+	(paper "A4")
+	(title_block
+		(title "Módulo de Actuadores")
+		(date "2026-05-29")
+		(company "PUCP")
+		(comment 1 "Aylas, Chavez; Espinar; Mendoza: Perez: Rodriguez: Yasuda")
+	)
+	(lib_symbols
+		(symbol "CarroTransbordador:LinearMotorL12"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U2"
+				(at 0 21.59 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Linear Motor L12"
+				(at 0 19.05 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LinearMotorL12_0_1"
+				(rectangle
+					(start -12.7 16.51)
+					(end 12.7 1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "LinearMotorL12_1_1"
+				(pin output line
+					(at -15.24 12.7 0)
+					(length 2.54)
+					(name "FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -15.24 7.62 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -15.24 5.08 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 12.7 180)
+					(length 2.54)
+					(name "VSIG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 8.89 180)
+					(length 2.54)
+					(name "CSIG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 5.08 180)
+					(length 2.54)
+					(name "RCSIG"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "CarroTransbordador:NEMA_Stepper_Motor"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "NEMA"
+				(at 0 -0.254 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "NEMA Stepper Motor"
+				(at 0 -3.048 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "NEMA_Stepper_Motor_0_1"
+				(polyline
+					(pts
+						(xy -5.08 -15.24) (xy -10.16 -15.24) (xy -10.16 -7.62) (xy -5.08 -7.62)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.81 -16.51) (xy -3.81 -21.59) (xy 3.81 -21.59) (xy 3.81 -16.51)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(bezier
+					(pts
+						(xy -1.27 -19.05) (xy 0 -19.05) (xy 0 -25.4) (xy 0 -21.59)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -11.43)
+					(radius 6.35)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "NEMA_Stepper_Motor_1_1"
+				(text "M"
+					(at 0 -11.43 0)
+					(effects
+						(font
+							(size 5.08 5.08)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -12.7 -8.89 0)
+					(length 2.54)
+					(name "B-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -12.7 -13.97 0)
+					(length 2.54)
+					(name "B+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -2.54 -24.13 90)
+					(length 2.54)
+					(name "A-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 2.54 -24.13 90)
+					(length 2.54)
+					(name "A+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Connector_Generic:Conn_01x04"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Conn_01x04_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GNDS"
+			(power)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GNDS"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GNDS\" , signal ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GNDS_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GNDS_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(bus_alias "PINES"
+		(members "B-" "B+" "A-" "A+")
+	)
+	(text_box "MOTORES STEPPER\n\n"
+		(exclude_from_sim no)
+		(at 17.78 17.78 0)
+		(size 200.66 85.09)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "6887f594-dc98-44d0-a607-01d8d8b5eb57")
+	)
+	(text_box "MOTOR LINEAL\n"
+		(exclude_from_sim no)
+		(at 17.78 110.49 0)
+		(size 151.13 38.1)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right top)
+		)
+		(uuid "bf3552dd-6a3f-42d3-a809-aed3fca3f7ad")
+	)
+	(junction
+		(at 39.37 134.62)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "21e22d53-5eaf-4d91-a8dd-4e84dc438922")
+	)
+	(no_connect
+		(at 146.05 128.27)
+		(uuid "0c3a2db5-1fd1-4100-bec7-d312f8db6199")
+	)
+	(no_connect
+		(at 146.05 132.08)
+		(uuid "b2e40814-865e-49ea-ba47-1bb5b1c0dc8a")
+	)
+	(bus_entry
+		(at 143.51 92.71)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "012cca5a-8308-47d0-87bb-bf738fce914e")
+	)
+	(bus_entry
+		(at 50.8 73.66)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "215d77c1-cfd4-46e5-ab5f-960c48109371")
+	)
+	(bus_entry
+		(at 50.8 52.07)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "390c04dc-c6b1-4a4e-9749-3fc89a59c76d")
+	)
+	(bus_entry
+		(at 143.51 78.74)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d657efa-e18b-4044-b502-0cf49de341b6")
+	)
+	(bus_entry
+		(at 143.51 48.26)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dd49e70-1a20-48c6-a927-efe0eab6f953")
+	)
+	(bus_entry
+		(at 143.51 38.1)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57d3ca41-a4c8-447d-a949-748746cc1086")
+	)
+	(bus_entry
+		(at 143.51 88.9)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69c39c41-a56d-4fe6-876b-949dba73a153")
+	)
+	(bus_entry
+		(at 143.51 52.07)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73a659c4-17cf-4244-97c6-94eee13833e5")
+	)
+	(bus_entry
+		(at 50.8 38.1)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f6f15c5-0d51-421d-95ef-a86a03aeaf4a")
+	)
+	(bus_entry
+		(at 50.8 33.02)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "834fef3b-f273-4771-a3ff-49f1947662a3")
+	)
+	(bus_entry
+		(at 50.8 78.74)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bbe249e-8819-4361-a0a3-c4f77be615eb")
+	)
+	(bus_entry
+		(at 50.8 92.71)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a45a3018-e83c-4680-949d-85811f12f4d2")
+	)
+	(bus_entry
+		(at 50.8 88.9)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be612633-a3a5-413b-9c00-eabceeaaa367")
+	)
+	(bus_entry
+		(at 143.51 73.66)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d392fa35-590f-4336-b91b-90123e447992")
+	)
+	(bus_entry
+		(at 50.8 48.26)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2eb3297-981f-4715-8457-131972c02494")
+	)
+	(bus_entry
+		(at 143.51 33.02)
+		(size 2.54 2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f85aa3fb-f95a-4bae-884c-ce4d810f0839")
+	)
+	(bus
+		(pts
+			(xy 143.51 33.02) (xy 143.51 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00ffaee7-3595-4911-a2f2-404f43cfb09a")
+	)
+	(wire
+		(pts
+			(xy 39.37 134.62) (xy 57.15 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01c29dce-22f4-43d2-9332-a30fda0797c3")
+	)
+	(bus
+		(pts
+			(xy 143.51 48.26) (xy 143.51 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a2ec3e5-1347-4d0f-9b6c-6f198ea8fc56")
+	)
+	(wire
+		(pts
+			(xy 69.85 132.08) (xy 31.75 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b8ec795-cc7c-4a8e-a48f-68cc2c13753f")
+	)
+	(bus
+		(pts
+			(xy 50.8 25.4) (xy 50.8 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "115d5042-9b40-4a34-8ae0-e255c203273f")
+	)
+	(wire
+		(pts
+			(xy 31.75 127) (xy 44.45 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11df90c2-e033-4613-8752-70b12786a98c")
+	)
+	(wire
+		(pts
+			(xy 146.05 54.61) (xy 186.69 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "170b0e1b-8360-4f7c-a9ae-ac871560639d")
+	)
+	(wire
+		(pts
+			(xy 31.75 129.54) (xy 44.45 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f3c0546-766f-4d40-b4fe-07ade4c9f5d7")
+	)
+	(wire
+		(pts
+			(xy 87.63 95.25) (xy 87.63 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "249c75ac-6dcc-4080-ac7a-0cc3325a52e0")
+	)
+	(wire
+		(pts
+			(xy 146.05 81.28) (xy 171.45 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "258a46a1-a287-424c-94b4-c11be1aa5cc7")
+	)
+	(wire
+		(pts
+			(xy 31.75 134.62) (xy 39.37 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28b76db0-fad1-4cc6-ac18-7c6fcbc1045a")
+	)
+	(bus
+		(pts
+			(xy 50.8 73.66) (xy 50.8 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b7c0d00-9857-496a-90db-45e1635a67ab")
+	)
+	(wire
+		(pts
+			(xy 53.34 54.61) (xy 87.63 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bf62c55-f537-47d3-915a-c15bdf0840eb")
+	)
+	(wire
+		(pts
+			(xy 111.76 132.08) (xy 111.76 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3208ac52-83d3-4418-8dca-734b0f70390e")
+	)
+	(wire
+		(pts
+			(xy 146.05 76.2) (xy 171.45 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "34193fd6-8f4a-4147-bbab-f1f57dbc1b2f")
+	)
+	(bus
+		(pts
+			(xy 50.8 88.9) (xy 50.8 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38cc5cfe-cb7b-4dcf-9312-b7085c4bf93a")
+	)
+	(bus
+		(pts
+			(xy 143.51 78.74) (xy 143.51 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a0e8f40-1bcf-45e9-a6f1-7e6728bea2d4")
+	)
+	(bus
+		(pts
+			(xy 50.8 48.26) (xy 50.8 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e1db95a-e0f2-412b-9907-6f0d0474af34")
+	)
+	(wire
+		(pts
+			(xy 111.76 124.46) (xy 115.57 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e8d5031-678e-40fb-98f7-f6f1fd2c01c0")
+	)
+	(wire
+		(pts
+			(xy 53.34 91.44) (xy 82.55 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "414bbe4d-c78d-4ff6-9603-a877e609530d")
+	)
+	(wire
+		(pts
+			(xy 146.05 40.64) (xy 171.45 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "41a10363-3b8c-4923-a139-dbdbe3bf5e29")
+	)
+	(bus
+		(pts
+			(xy 50.8 33.02) (xy 50.8 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "492119fd-e1af-4080-970b-e321b997df74")
+	)
+	(wire
+		(pts
+			(xy 146.05 35.56) (xy 171.45 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f0f7a43-2f71-4f50-9f73-6aefd4571582")
+	)
+	(bus
+		(pts
+			(xy 143.51 88.9) (xy 143.51 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f215cb2-a501-4ead-befd-f9053136cfd6")
+	)
+	(bus
+		(pts
+			(xy 137.16 64.77) (xy 143.51 64.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "515c8f27-0312-4ebe-85c8-c8ea96942879")
+	)
+	(bus
+		(pts
+			(xy 44.45 66.04) (xy 50.8 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54eecab4-c4cb-4195-addf-fffe08bd74fb")
+	)
+	(wire
+		(pts
+			(xy 53.34 50.8) (xy 82.55 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5630e405-3c5b-4c44-8d9f-3a5dd1eb12b6")
+	)
+	(wire
+		(pts
+			(xy 87.63 50.8) (xy 87.63 54.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7518b85e-d6d1-4ae8-a60b-51a3b578e284")
+	)
+	(bus
+		(pts
+			(xy 50.8 78.74) (xy 50.8 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "819201dd-bae6-4246-a0e4-5537f21e7595")
+	)
+	(wire
+		(pts
+			(xy 186.69 54.61) (xy 186.69 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83b65f9a-0295-4e3a-b013-739bcb9b9acf")
+	)
+	(bus
+		(pts
+			(xy 143.51 73.66) (xy 143.51 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98456ae1-a811-43de-bcfd-b05117164a19")
+	)
+	(wire
+		(pts
+			(xy 100.33 129.54) (xy 115.57 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99729c0d-00f3-439e-b695-508ad9000134")
+	)
+	(wire
+		(pts
+			(xy 39.37 140.97) (xy 43.18 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9a62cbf8-b046-401b-b1ca-fe7ce7652584")
+	)
+	(bus
+		(pts
+			(xy 50.8 38.1) (xy 50.8 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f504ab0-cf0c-4384-9b63-ae9500ac6873")
+	)
+	(wire
+		(pts
+			(xy 69.85 134.62) (xy 69.85 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a1189ef3-a9b1-4727-8055-4d0a4ef56613")
+	)
+	(wire
+		(pts
+			(xy 146.05 124.46) (xy 149.86 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3410e77-1e12-4639-a1ee-8edb93554e5a")
+	)
+	(wire
+		(pts
+			(xy 146.05 50.8) (xy 181.61 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7133f7a-cbea-4bb7-a9d3-9b424b2e8429")
+	)
+	(bus
+		(pts
+			(xy 143.51 25.4) (xy 143.51 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b276c7e1-6397-481f-9708-94fe060e278e")
+	)
+	(wire
+		(pts
+			(xy 146.05 91.44) (xy 181.61 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b409d265-c0c2-4d2a-9770-5d41117307fa")
+	)
+	(wire
+		(pts
+			(xy 39.37 134.62) (xy 39.37 140.97)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5f52f96-ea10-48e2-9744-f74f7c929369")
+	)
+	(wire
+		(pts
+			(xy 53.34 95.25) (xy 87.63 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be88241b-29af-4064-b3a8-23e5e3672d73")
+	)
+	(bus
+		(pts
+			(xy 143.51 38.1) (xy 143.51 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "befcaff4-3b50-4ca6-bf20-da40b3b8bbea")
+	)
+	(bus
+		(pts
+			(xy 143.51 64.77) (xy 143.51 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0498df2-6cb1-4d9e-b091-17dd165c4ceb")
+	)
+	(wire
+		(pts
+			(xy 146.05 95.25) (xy 186.69 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c50a659d-7666-4c77-8cad-7629b30fadf9")
+	)
+	(wire
+		(pts
+			(xy 53.34 76.2) (xy 72.39 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc272078-a6dd-4a30-aeeb-f58b7b9062ae")
+	)
+	(wire
+		(pts
+			(xy 53.34 81.28) (xy 72.39 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d050dd56-5add-4060-b373-6234504545d4")
+	)
+	(bus
+		(pts
+			(xy 44.45 25.4) (xy 50.8 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8cc0978-b757-4e53-ac3f-4e26edc8f94e")
+	)
+	(bus
+		(pts
+			(xy 137.16 25.4) (xy 143.51 25.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "db77163b-0e74-4b31-b422-e094295d3be9")
+	)
+	(wire
+		(pts
+			(xy 53.34 40.64) (xy 72.39 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e33fdbf8-c302-4619-afc4-6e16da965008")
+	)
+	(bus
+		(pts
+			(xy 50.8 66.04) (xy 50.8 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef3ecc54-d14d-4433-ae45-ca627112dbb3")
+	)
+	(wire
+		(pts
+			(xy 115.57 132.08) (xy 111.76 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f392ba63-9804-4cac-8d1c-e1b3a1a6e628")
+	)
+	(wire
+		(pts
+			(xy 53.34 35.56) (xy 72.39 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3ad4998-65af-482e-b7d4-7ec5e7fcab77")
+	)
+	(wire
+		(pts
+			(xy 186.69 95.25) (xy 186.69 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5ad06b2-8055-4c3c-aa81-a9f8a81e491d")
+	)
+	(label "INPUT_TR.A-"
+		(at 53.34 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0d0d7e50-0bb0-4336-a65d-b777d21242c7")
+	)
+	(label "INPUT_POLEA.A-"
+		(at 146.05 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "11d138e0-63f3-42ce-8c33-960bb7caaf10")
+	)
+	(label "INPUT_EMPOT1.A+"
+		(at 53.34 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1ac981de-c719-4032-a38b-0281b9b7b1c7")
+	)
+	(label "INPUT_EMPOT2.B-"
+		(at 146.05 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "36a3e821-897d-4b5a-ab0a-9f39350f0d3f")
+	)
+	(label "INPUT_TR.A+"
+		(at 53.34 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "42eef5d0-3072-440e-8121-ea264fd2b8c0")
+	)
+	(label "INPUT_EMPOT1.B+"
+		(at 53.34 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4755a1e1-f85f-442e-8f45-ddbfaf435ca4")
+	)
+	(label "INPUT_TR.B+"
+		(at 53.34 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "679cb5eb-f3c4-4f7b-a042-3fdceb4d9f53")
+	)
+	(label "PWR_LINEAR"
+		(at 100.33 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "69dd3481-3b1a-45fd-91c8-1cf49d36286d")
+	)
+	(label "INPUT_POLEA.B+"
+		(at 146.05 81.28 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "720e1a53-10fc-4870-9ee0-1c057620fdd3")
+	)
+	(label "INPUT_TR.B-"
+		(at 53.34 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7e676b89-2696-41a3-a6b1-1ea1763a2edc")
+	)
+	(label "INPUT_POLEA.A+"
+		(at 146.05 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "99269168-227d-4ffa-a7b3-2021b8f16db1")
+	)
+	(label "PWR_LINEAR"
+		(at 57.15 134.62 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "aeb7b8b2-ddfe-484d-841d-1ebd9f88c55f")
+	)
+	(label "INPUT_EMPOT2.A-"
+		(at 146.05 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b5a78228-a412-41c0-87ef-fc442fd624e1")
+	)
+	(label "INPUT_POLEA.B-"
+		(at 146.05 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bfbc85a1-b094-4ed5-b2af-acc5589d47b0")
+	)
+	(label "INPUT_EMPOT2.A+"
+		(at 146.05 54.61 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cb37f2da-f9ed-412f-97dc-b04de3445e2c")
+	)
+	(label "INPUT_EMPOT1.B-"
+		(at 53.34 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5938323-4c94-408c-9031-223473720781")
+	)
+	(label "INPUT_EMPOT2.B+"
+		(at 146.05 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e150c06a-6c74-4749-a0ba-267af835f141")
+	)
+	(label "INPUT_EMPOT1.A-"
+		(at 53.34 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "efe2b5f7-7262-44e6-b11c-520faa35f114")
+	)
+	(hierarchical_label "INPUT_POLEA{PINES}"
+		(shape input)
+		(at 137.16 64.77 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2343d7ff-2d3a-4a0d-8ed8-3436b5d0134c")
+	)
+	(hierarchical_label "INPUT_EMPOT1{PINES}"
+		(shape input)
+		(at 44.45 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2c08d19f-8575-4379-b10b-215f1712111c")
+	)
+	(hierarchical_label "INPUT_EMPOT2{PINES}"
+		(shape input)
+		(at 137.16 25.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "360e5ee9-88b6-4ff1-a831-4af53fa957ca")
+	)
+	(hierarchical_label "FD_LINEAR"
+		(shape input)
+		(at 44.45 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5e885016-e43f-4fea-a967-307208c00c11")
+	)
+	(hierarchical_label "CTRL_LINEAR"
+		(shape input)
+		(at 44.45 129.54 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "93c3981d-3845-4729-891e-67b904932193")
+	)
+	(hierarchical_label "CTRL_LINEAR"
+		(shape input)
+		(at 149.86 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "97644558-1fca-4a99-93a4-d1671a9519d8")
+	)
+	(hierarchical_label "FD_LINEAR"
+		(shape input)
+		(at 111.76 124.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "af081968-ba32-47e0-bf1f-e0861eec19a7")
+	)
+	(hierarchical_label "INPUT_TR{PINES}"
+		(shape input)
+		(at 44.45 25.4 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b6675d45-6351-47d9-b518-713732d67f75")
+	)
+	(hierarchical_label "12V_LIN_CAP"
+		(shape input)
+		(at 43.18 140.97 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ecad88ad-b901-42af-8c59-c76be46ddc5d")
+	)
+	(symbol
+		(lib_id "CarroTransbordador:NEMA_Stepper_Motor")
+		(at 85.09 26.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "484a95bd-cb94-4815-9207-9f46b5b6424c")
+		(property "Reference" "NEMA1"
+			(at 92.71 38.7349 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NEMA Transbordador"
+			(at 92.71 41.2749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c7205b0d-7f69-4b2c-9c4e-fbbb31b7ae59")
+		)
+		(pin "1"
+			(uuid "7bff5966-f056-4907-9141-e5b59e26747d")
+		)
+		(pin "4"
+			(uuid "3162f6ee-a4f0-4c30-ae1c-db1cd56cf7ed")
+		)
+		(pin "3"
+			(uuid "6448dcaf-9d74-4178-a251-5dbd3e78f9c2")
+		)
+		(instances
+			(project ""
+				(path "/911418d1-1173-4b7a-bef0-90371fdba379/bd4ac366-1e48-4446-8542-8a4ca301b7d6"
+					(reference "NEMA1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDS")
+		(at 111.76 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4e8c2e28-9def-446f-b2d2-af3fe62704d9")
+		(property "Reference" "#PWR074"
+			(at 111.76 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDS"
+			(at 111.76 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDS\" , signal ground"
+			(at 111.76 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e588a5f2-afc7-4b9b-99b9-5a782f085eb4")
+		)
+		(instances
+			(project "CarroTransbordador"
+				(path "/911418d1-1173-4b7a-bef0-90371fdba379/bd4ac366-1e48-4446-8542-8a4ca301b7d6"
+					(reference "#PWR074")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDS")
+		(at 69.85 134.62 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "57601dca-0bdc-475a-8e9f-430afab35f9b")
+		(property "Reference" "#PWR063"
+			(at 69.85 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDS"
+			(at 69.85 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.85 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDS\" , signal ground"
+			(at 69.85 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3099d298-ddd5-40c2-8e39-bd93b2290253")
+		)
+		(instances
+			(project "CarroTransbordador"
+				(path "/911418d1-1173-4b7a-bef0-90371fdba379/bd4ac366-1e48-4446-8542-8a4ca301b7d6"
+					(reference "#PWR063")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CarroTransbordador:LinearMotorL12")
+		(at 130.81 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9d8c557f-5509-44f9-8c1c-9410672ed8b0")
+		(property "Reference" "U2"
+			(at 130.81 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Linear Motor L12"
+			(at 130.81 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 130.81 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 130.81 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "b2297292-1937-4614-86b8-e0eeee94f954")
+		)
+		(pin "5"
+			(uuid "7be3b58c-99ec-4b0e-8712-c402893cb38d")
+		)
+		(pin "3"
+			(uuid "2ccc303a-203a-46b6-92b9-cea99a13ef76")
+		)
+		(pin "1"
+			(uuid "cbfb3b65-e3c6-499a-9128-b5c2c3dfa43d")
+		)
+		(pin "2"
+			(uuid "e59dbd65-c6eb-45a8-9d17-560eb96a03d5")
+		)
+		(pin "6"
+			(uuid "3dac2284-7d2a-4fa5-a83a-a790bb8c317b")
+		)
+		(instances
+			(project ""
+				(path "/911418d1-1173-4b7a-bef0-90371fdba379/bd4ac366-1e48-4446-8542-8a4ca301b7d6"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CarroTransbordador:NEMA_Stepper_Motor")
+		(at 85.09 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce18c77e-1df7-4925-8e40-f4f543fd9472")
+		(property "Reference" "NEMA2"
+			(at 92.71 79.3749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NEMA Empotramiento 1"
+			(at 92.71 81.9149 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c8d319fc-a762-4615-afc5-2c9a986ad49f")
+		)
+		(pin "1"
+			(uuid "0b3e7c1f-2ae1-437a-97b2-d7edf75d243d")
+		)
+		(pin "4"
+			(uuid "84d467ad-551a-483c-a33f-b814214428e9")
+		)
+		(pin "3"
+			(uuid "57980963-7833-4e28-a551-a4918728ff5a")
+		)
+		(instances
+			(project "CarroTransbordador"
+				(path "/911418d1-1173-4b7a-bef0-90371fdba379/bd4ac366-1e48-4446-8542-8a4ca301b7d6"
+					(reference "NEMA2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CarroTransbordador:NEMA_Stepper_Motor")
+		(at 184.15 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eecd4044-47c9-49bb-9543-ed969219607f")
+		(property "Reference" "NEMA4"
+			(at 191.77 79.3749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NEMA Polea"
+			(at 191.77 81.9149 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.15 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.15 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 184.15 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "d5b56741-cd42-4e74-9d97-3e90fc3cc687")
+		)
+		(pin "2"
+			(uuid "c1328405-305b-47bb-8c82-77c9f120d659")
+		)
+		(pin "1"
+			(uuid "8caf1846-7956-4342-820d-a6004b590ce7")
+		)
+		(pin "4"
+			(uuid "e0f47c7d-73ff-41e5-82d1-c86c3c3ee633")
+		)
+		(instances
+			(project "CarroTransbordador"
+				(path "/911418d1-1173-4b7a-bef0-90371fdba379/bd4ac366-1e48-4446-8542-8a4ca301b7d6"
+					(reference "NEMA4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 26.67 132.08 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f1aaf832-1180-48a0-afd4-9be38e49695e")
+		(property "Reference" "J26"
+			(at 26.67 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn. Lineal"
+			(at 26.67 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-04A_1x04_P2.54mm_Vertical"
+			(at 26.67 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 26.67 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 26.67 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "210c815f-da50-4910-9a32-648e5e583d91")
+		)
+		(pin "4"
+			(uuid "4db222f5-acff-4c46-b16f-d779be8262f5")
+		)
+		(pin "1"
+			(uuid "eee22b34-a81c-4d6d-a41d-64c6df9046cf")
+		)
+		(pin "2"
+			(uuid "d6ae03a9-2f32-49e4-93bc-1389c0488119")
+		)
+		(instances
+			(project ""
+				(path "/911418d1-1173-4b7a-bef0-90371fdba379/bd4ac366-1e48-4446-8542-8a4ca301b7d6"
+					(reference "J26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "CarroTransbordador:NEMA_Stepper_Motor")
+		(at 184.15 26.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f626b943-2fa8-45ba-bea8-59e02fc0f1e6")
+		(property "Reference" "NEMA3"
+			(at 191.77 38.7349 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "NEMA Empotramiento 2"
+			(at 191.77 41.2749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 184.15 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.15 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 184.15 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "d0b8617a-d46e-4852-8427-fad82b6a36de")
+		)
+		(pin "1"
+			(uuid "4bb66793-1e5c-477a-b4ea-620d87aa4444")
+		)
+		(pin "2"
+			(uuid "74c41a67-da03-40f8-9066-11a92a033760")
+		)
+		(pin "4"
+			(uuid "e596268b-07b0-4f0c-85f9-9379f98bf833")
+		)
+		(instances
+			(project "CarroTransbordador"
+				(path "/911418d1-1173-4b7a-bef0-90371fdba379/bd4ac366-1e48-4446-8542-8a4ca301b7d6"
+					(reference "NEMA3")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
