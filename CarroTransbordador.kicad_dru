@@ -1,0 +1,7 @@
+(version 1)
+(rule "Reducir clearance en pads para evitar DRC"
+   (constraint clearance (min 0.3mm))
+   (condition "A.Type == 'Pad' && B.Type == 'Track'"))
+(rule "Reducir clearance en pads para evitar DRC"
+   (constraint clearance (min 0.3mm))
+   (condition "A.Type == 'Pad' && B.Type == 'Pad'"))

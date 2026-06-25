@@ -5940,16 +5940,6 @@
 		)
 		(uuid "071d8354-e1e6-4121-9ebb-a6e79f333f18")
 	)
-	(label "PWR_ARDUINO"
-		(at 57.15 80.01 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0af96c15-aaf5-409c-a890-3f61d578e88d")
-	)
 	(label "PUL_MOTOR_POLEA"
 		(at 146.05 44.45 180)
 		(effects
@@ -5969,16 +5959,6 @@
 			(justify left bottom)
 		)
 		(uuid "13dc78e6-de12-4e05-84d7-557250986ea4")
-	)
-	(label "SERIAL_TX_ARD"
-		(at 25.4 132.08 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "16e5303f-3ba1-431b-b4bb-ff1a2af9ea34")
 	)
 	(label "PIN_LED_POLEA"
 		(at 166.37 154.94 0)
@@ -6030,16 +6010,6 @@
 		)
 		(uuid "2098a08d-9750-4af1-a3f3-881d8c84446d")
 	)
-	(label "5V_ARDUINO"
-		(at 62.23 163.83 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "23468a01-5532-4f05-bf93-648e97df60f8")
-	)
 	(label "PWR_DRIVERS"
 		(at 394.97 34.29 180)
 		(effects
@@ -6059,6 +6029,16 @@
 			(justify right bottom)
 		)
 		(uuid "26d6a9af-736b-4986-8c03-64e229a6665a")
+	)
+	(label "PWR_ARDUINO"
+		(at 62.23 163.83 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "28fde882-c2e3-4b62-a9e9-1f8cfd3dd6d7")
 	)
 	(label "PUL_MOTOR_EMPOT2"
 		(at 318.77 55.88 180)
@@ -6209,6 +6189,16 @@
 			(justify right bottom)
 		)
 		(uuid "5f9fef18-e73c-41ea-a31a-727f013d8d8c")
+	)
+	(label "PWR_ARDUINO"
+		(at 25.4 137.16 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6013c635-cd05-4115-9a0d-769f8d75aa62")
 	)
 	(label "PUL_MOTOR_TR"
 		(at 318.77 33.02 180)
@@ -6510,16 +6500,6 @@
 		)
 		(uuid "b328e752-551b-459a-b57c-0b1e2ef95d8f")
 	)
-	(label "SERIAL_RX_ARD"
-		(at 25.4 134.62 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b3ded2dd-5b1a-483b-8875-165d05ba439c")
-	)
 	(label "SERIAL_TX_ESP"
 		(at 147.32 118.11 180)
 		(effects
@@ -6549,6 +6529,16 @@
 			(justify right bottom)
 		)
 		(uuid "ba34c94b-d218-458d-a4e2-d73235b2d928")
+	)
+	(label "PWR_ARDUINO"
+		(at 57.15 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bd0bd075-8cae-43ea-b778-61c3e66cd5ce")
 	)
 	(label "MOTOR_TR.A-"
 		(at 354.33 93.98 0)
@@ -6630,6 +6620,16 @@
 		)
 		(uuid "c91d127b-6822-4448-94c7-3978095846f9")
 	)
+	(label "SERIAL_RX_ARD"
+		(at 25.4 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c9ae5533-a44c-4660-9597-cd4a01630d72")
+	)
 	(label "PUL_MOTOR_POLEA"
 		(at 359.41 33.02 180)
 		(effects
@@ -6670,6 +6670,16 @@
 		)
 		(uuid "d7a2b7ba-d842-428c-9aa9-197346236f25")
 	)
+	(label "SERIAL_TX_ARD"
+		(at 25.4 134.62 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d9654cad-aefb-4558-b974-cce3fe43ae36")
+	)
 	(label "3V3_ESP"
 		(at 60.96 191.77 180)
 		(effects
@@ -6689,16 +6699,6 @@
 			(justify left bottom)
 		)
 		(uuid "e7ff7876-4bd3-4d5d-ab8c-495120da9a8f")
-	)
-	(label "PWR_ARDUINO"
-		(at 25.4 137.16 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "e8b6ff76-74db-467d-a055-71270555e481")
 	)
 	(label "DIR_MOTOR_EMPOT2"
 		(at 318.77 58.42 180)

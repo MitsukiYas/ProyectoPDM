@@ -767,249 +767,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Screw_Terminal_01x03"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Screw_Terminal_01x03"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "screw terminal"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "TerminalBlock*:*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Screw_Terminal_01x03_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -3.81)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.5334 2.8702) (xy 0.3302 2.032)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.3556 3.048) (xy 0.508 2.2098)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.3556 0.508) (xy 0.508 -0.3302)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 2.54)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 -2.54)
-					(radius 0.635)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -2227,6 +1984,12 @@
 		(uuid "23358072-6c3f-405f-825e-04767c3b1c8c")
 	)
 	(junction
+		(at 189.23 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "28799dca-657f-4f9f-b631-01d5cf069750")
+	)
+	(junction
 		(at 172.72 45.72)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2303,12 +2066,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bfd6f897-8852-476c-90b8-9fb6e4ccd2a1")
-	)
-	(junction
-		(at 116.84 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e2194d5d-89f2-4ea3-b398-2bb9d525f622")
 	)
 	(junction
 		(at 116.84 67.31)
@@ -2424,7 +2181,7 @@
 	)
 	(wire
 		(pts
-			(xy 200.66 55.88) (xy 189.23 55.88)
+			(xy 189.23 55.88) (xy 200.66 55.88)
 		)
 		(stroke
 			(width 0)
@@ -2451,16 +2208,6 @@
 			(type default)
 		)
 		(uuid "24cbbfb9-364d-44f3-9378-6cd268b51370")
-	)
-	(wire
-		(pts
-			(xy 170.18 113.03) (xy 184.15 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2639c220-438a-4535-9e36-62086d7ec5bd")
 	)
 	(wire
 		(pts
@@ -2561,6 +2308,16 @@
 			(type default)
 		)
 		(uuid "38ce0ce9-628e-44a9-84a2-b0c079513300")
+	)
+	(wire
+		(pts
+			(xy 189.23 71.12) (xy 190.5 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40b55157-9fd4-4d53-af9e-e28500172eab")
 	)
 	(wire
 		(pts
@@ -2994,16 +2751,6 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 80.01) (xy 120.65 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ba35d3a8-8c81-4057-a573-112bda9bf2b8")
-	)
-	(wire
-		(pts
 			(xy 157.48 74.93) (xy 157.48 77.47)
 		)
 		(stroke
@@ -3204,6 +2951,16 @@
 	)
 	(wire
 		(pts
+			(xy 189.23 55.88) (xy 189.23 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f37fd2b1-e05e-43a4-a104-ebd14e057c80")
+	)
+	(wire
+		(pts
 			(xy 36.83 106.68) (xy 36.83 110.49)
 		)
 		(stroke
@@ -3341,16 +3098,6 @@
 			(justify right bottom)
 		)
 		(uuid "922fa08a-3151-426e-85ff-ef9e01fc7ff5")
-	)
-	(label "F6A_IN"
-		(at 184.15 113.03 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9304d16f-66b5-4e0c-be69-e50bb3117123")
 	)
 	(label "REG_IN-"
 		(at 208.28 66.04 0)
@@ -3502,6 +3249,17 @@
 		)
 		(uuid "fdd96285-3e96-4484-9a81-b893ef75f916")
 	)
+	(hierarchical_label "12V_LIN_CAP"
+		(shape input)
+		(at 190.5 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "977736d3-f9f4-4ca0-993e-f773b6303b84")
+	)
 	(hierarchical_label "5V_FUENTE"
 		(shape input)
 		(at 260.35 57.15 0)
@@ -3523,17 +3281,6 @@
 			(justify left)
 		)
 		(uuid "a7ed52b0-8357-411b-8824-b07d205da83e")
-	)
-	(hierarchical_label "12V_LIN_CAP"
-		(shape input)
-		(at 120.65 80.01 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c866f560-ed3d-4d0c-b7db-b2b5ce7437f3")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3768,7 +3515,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 36.83 102.87 0)
 			(effects
 				(font
@@ -3879,6 +3626,73 @@
 			(project "CarroTransbordador"
 				(path "/911418d1-1173-4b7a-bef0-90371fdba379/467c15ee-83d4-40af-be24-6ac2c7c7ed2f"
 					(reference "#PWR034")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 107.95 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp no)
+		(uuid "2b3176b6-1afb-413d-a244-6e21d0152a92")
+		(property "Reference" "J5"
+			(at 107.95 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Borner 12V 10A"
+			(at 107.95 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock:TerminalBlock_Xinya_XY308-2.54-2P_1x02_P2.54mm_Horizontal"
+			(at 107.95 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 107.95 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 107.95 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "438fd252-f2ea-4fab-8e05-49b5c61b0215")
+		)
+		(pin "2"
+			(uuid "b8832769-a6a4-4b30-bcf5-cd42444526c1")
+		)
+		(instances
+			(project "CarroTransbordador"
+				(path "/911418d1-1173-4b7a-bef0-90371fdba379/467c15ee-83d4-40af-be24-6ac2c7c7ed2f"
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -4692,6 +4506,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 165.1 118.11 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "70858cff-a495-49a3-bd25-c49d9e8fe4a7")
+		(property "Reference" "J40"
+			(at 165.1 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Borner Switch IN"
+			(at 165.1 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock:TerminalBlock_Xinya_XY308-2.54-2P_1x02_P2.54mm_Horizontal"
+			(at 165.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 165.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 165.1 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aebb9057-aec3-420a-b720-3d6e64d09599")
+		)
+		(pin "2"
+			(uuid "c98186fe-d427-4769-881e-e4d46c25d32c")
+		)
+		(instances
+			(project "CarroTransbordador"
+				(path "/911418d1-1173-4b7a-bef0-90371fdba379/467c15ee-83d4-40af-be24-6ac2c7c7ed2f"
+					(reference "J40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "CarroTransbordador:Convertidor 220 AC a 12 DC")
 		(at 67.31 31.75 0)
 		(unit 1)
@@ -4760,74 +4642,6 @@
 			(project "CarroTransbordador"
 				(path "/911418d1-1173-4b7a-bef0-90371fdba379/467c15ee-83d4-40af-be24-6ac2c7c7ed2f"
 					(reference "AC_DC1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 107.95 95.25 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board no)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "744ad433-7bbe-4d56-aae6-e69bbb39c0f5")
-		(property "Reference" "J5"
-			(at 107.95 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Fusible 12V 10A"
-			(at 107.95 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_Xinya_XY308-2.54-2P_1x02_P2.54mm_Horizontal"
-			(at 107.95 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 107.95 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 107.95 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cb1d36f1-553b-40b5-a95a-85a2678bffef")
-		)
-		(pin "2"
-			(uuid "dcfdda40-59c2-47d2-9b38-d8b57edd463c")
-		)
-		(instances
-			(project "CarroTransbordador"
-				(path "/911418d1-1173-4b7a-bef0-90371fdba379/467c15ee-83d4-40af-be24-6ac2c7c7ed2f"
-					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -5772,77 +5586,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Screw_Terminal_01x03")
-		(at 165.1 115.57 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cb6d4eb7-7fc6-48b4-8eca-a86e253e8ad5")
-		(property "Reference" "J6"
-			(at 165.1 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Screw_Terminal_01x03"
-			(at 165.1 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TerminalBlock:TerminalBlock_Xinya_XY308-2.54-3P_1x03_P2.54mm_Horizontal"
-			(at 165.1 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 165.1 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic screw terminal, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 165.1 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "3acef167-8297-4a6e-99b3-4647107f0e23")
-		)
-		(pin "1"
-			(uuid "795f9fab-497d-4fba-bb3e-249f31d3972a")
-		)
-		(pin "2"
-			(uuid "a1e3d168-4b54-46ca-bbd4-4a48728da341")
-		)
-		(instances
-			(project ""
-				(path "/911418d1-1173-4b7a-bef0-90371fdba379/467c15ee-83d4-40af-be24-6ac2c7c7ed2f"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
 		(at 165.1 97.79 180)
 		(unit 1)
@@ -6069,7 +5812,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D3.0mm"
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 22.86 102.87 0)
 			(effects
 				(font
