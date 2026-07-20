@@ -1,245 +1,155 @@
 #include "automatico.h"
 #include "variables.h"
-// Estado actual
-EstadoAutomatico estadoAuto = AUTO_IDLE;
-EstadoArrastreInicial estadoAI = AI_IDLE;
-EstadoArrastreVagon estadoAV =AV_IDLE;
 
-unsigned long tiempoMovimientoCarro = 0; 
-bool empotRetractIniciado = false;
-static int pulsosSensor = 0;
+EstadoAutomatico estadoAuto = AUTO_IDLE;
+EstadoAutomatico siguienteEstado = AUTO_IDLE; // A dónde ir después de la pausa
+unsigned long tiempoInicioEstado = 0;
+const unsigned long DURACION_PRUEBA = 5000; // 5 segundos para actuador
+const unsigned long DURACION_PAUSA = 2000;  // 2 segundos de pausa
 
 void iniciarAutomatico() {
-    estadoAuto = AUTO_MOVIMIENTO;
+    estadoAuto = AUTO_CARRO;
+    tiempoInicioEstado = millis();
+
+    // Encender carro
+    carroVelocidad = 2000;
+    digitalWrite(pinLedCarro, HIGH);
+}
+
+void detenerAutomatico() {
     carroVelocidad = 0;
     empotActivo = false;
     engancheActivo = false;
-}
-
-
-void detenerAutomatico() {
+    digitalWrite(pinActuador, LOW);
+    digitalWrite(pinLedCarro, LOW);
+    digitalWrite(pinLedEmpotramiento, LOW);
+    digitalWrite(pinLedActuador, LOW);
+    digitalWrite(pinLedPolea, LOW);
     estadoAuto = AUTO_IDLE;
 }
 
 void ejecutarSecuenciaCompleta() {
-
     switch (estadoAuto) {
         case AUTO_IDLE:
-          break;
-        case AUTO_MOVIMIENTO:
-            carroVelocidad = 2000;
-            tiempoMovimientoCarro =millis();
-            if (digitalRead(carroSensorCap)){
-                if (millis()-tiempoMovimientoCarro>1000){//verificamos que haya avanzado algo al menos
-                    carroVelocidad = 0;
-                    estadoAuto = AUTO_DESPLEGAR_ESTABILIZADORES;
+            break;
+
+        case AUTO_CARRO:
+            if (millis() - tiempoInicioEstado >= 1000) {
+                // Apagar carro
+                carroVelocidad = 0;
+                digitalWrite(pinLedCarro, LOW);
+
+                // Ir a pausa, después estabilizadores
+                siguienteEstado = AUTO_ESTABILIZADORES;
+                tiempoInicioEstado = millis();
+                estadoAuto = AUTO_PAUSA;
+            }
+            break;
+
+        case AUTO_PAUSA:
+            if (millis() - tiempoInicioEstado >= DURACION_PAUSA) {
+                tiempoInicioEstado = millis();
+                estadoAuto = siguienteEstado;
+
+                // Encender lo que toque según el siguiente estado
+                if (siguienteEstado == AUTO_ESTABILIZADORES) {
+                    empotDireccion = true;
+                    empotActivo = true;
+                    digitalWrite(pinLedEmpotramiento, HIGH);
+                }
+                else if (siguienteEstado == AUTO_RETRAER_ESTABILIZADORES) {
+                    empotDireccion = false;
+                    empotActivo = true;
+                    digitalWrite(pinLedEmpotramiento, HIGH);
+                }
+                else if (siguienteEstado == AUTO_ACTUADOR) {
+                    digitalWrite(pinActuador, HIGH);
+                    digitalWrite(pinLedActuador, HIGH);
+                }
+                else if (siguienteEstado == AUTO_POLEA) {
+                    engancheDireccion = true;
+                    engancheActivo = true;
+                    engancheModoPasos = false;
+                    digitalWrite(pinLedPolea, HIGH);
                 }
             }
+            break;
 
-          break;
-        case AUTO_DESPLEGAR_ESTABILIZADORES:
-            if (!empotActivo && empotPasosRestantes <= 0) {
-                empotDireccion = true; 
-                empotPasosRestantes = 999999; //Alto para que sea un proceso pseudo infinito
-                empotActivo = true;
-            } 
-            if (
-                digitalRead(sensorFinEmpot1) &&
-                digitalRead(sensorFinEmpot2)
-            )
-            {
+        case AUTO_ESTABILIZADORES:
+            if (millis() - tiempoInicioEstado >= 1000) {
+                // Apagar estabilizadores (antes de pausa)
                 empotActivo = false;
-                empotPasosRestantes = 0;
-                estadoAI = AI_DESENROLLAR_INICIAL;
-                estadoAuto = AUTO_ARRASTRE_INICIAL;
-            }
-            break;
+                digitalWrite(pinLedEmpotramiento, LOW);
 
-        case AUTO_ARRASTRE_INICIAL:
-            ejecutarArrastreInicial();         
-            break;
-
-        case AUTO_ARRASTRE_VAGON:
-            // Inicializamos
-            if (estadoAV == AV_IDLE) {
-                vagonesTrasladados = 0;
-                estadoAV = AV_DESPLEGAR;
-            }
-            ejecutarArrastreVagon();
-
-            // Al terminar todos los vagones, avanzamos
-            if (estadoAV == AV_FIN) {
-                estadoAV = AV_IDLE;
-                estadoAuto = AUTO_RETRAER_ESTABILIZADORES;
+                // Ir a pausa, después retraer
+                siguienteEstado = AUTO_RETRAER_ESTABILIZADORES;
+                tiempoInicioEstado = millis();
+                estadoAuto = AUTO_PAUSA;
             }
             break;
 
         case AUTO_RETRAER_ESTABILIZADORES:
-            //Gira 4 vueltas
-            if (!empotRetractIniciado) {
-                moverEmpotPasos(4, false); 
-                empotRetractIniciado = true;
-            }
-            //verificamos que los fines de carrera ya no se presionen y hayan dado X pasos
-            if (!empotActivo && digitalRead(sensorFinEmpot1) == LOW && digitalRead(sensorFinEmpot2) == LOW) {
-                empotRetractIniciado = false;
-                autoclavesCompletos++;
-                estadoAuto = AUTO_SIGUIENTE_AUTOCLAVE;
+            if (millis() - tiempoInicioEstado >= 1000) {
+                // Apagar estabilizadores
+                empotActivo = false;
+                digitalWrite(pinLedEmpotramiento, LOW);
+
+                // Ir a pausa, después actuador
+                siguienteEstado = AUTO_ACTUADOR;
+                tiempoInicioEstado = millis();
+                estadoAuto = AUTO_PAUSA;
             }
             break;
 
-        case AUTO_SIGUIENTE_AUTOCLAVE:
-            if (autoclavesCompletos>=autoclavesTotales){
-                estadoAuto=AUTO_FIN; //Añadimos algo al final? maybe
-                autoclavesCompletos =0;
-            } else {
-                estadoAuto=AUTO_MOVIMIENTO;
+        case AUTO_ACTUADOR:
+            if (millis() - tiempoInicioEstado >= DURACION_PRUEBA) {
+                // Apagar actuador
+                digitalWrite(pinActuador, LOW);
+                digitalWrite(pinLedActuador, LOW);
+
+                // Ir a pausa, después polea
+                siguienteEstado = AUTO_POLEA;
+                tiempoInicioEstado = millis();
+                estadoAuto = AUTO_PAUSA;
+            }
+            break;
+
+        case AUTO_POLEA:
+            if (millis() - tiempoInicioEstado >= 1000) {
+                // Apagar polea
+                engancheActivo = false;
+                digitalWrite(pinLedPolea, LOW);
+
+                // Iniciar ciclo repetitivo del actuador
+                digitalWrite(pinActuador, HIGH);
+                digitalWrite(pinLedActuador, HIGH);
+                tiempoInicioEstado = millis();
+                estadoAuto = AUTO_ACTUADOR_ON;
+            }
+            break;
+
+        case AUTO_ACTUADOR_ON:
+            if (millis() - tiempoInicioEstado >= 10000) {
+                // Apagar actuador por 8 segundos
+                digitalWrite(pinActuador, LOW);
+                digitalWrite(pinLedActuador, LOW);
+                tiempoInicioEstado = millis();
+                estadoAuto = AUTO_ACTUADOR_OFF;
+            }
+            break;
+
+        case AUTO_ACTUADOR_OFF:
+            if (millis() - tiempoInicioEstado >= 10000) {
+                // Encender actuador por 5 segundos
+                digitalWrite(pinActuador, HIGH);
+                digitalWrite(pinLedActuador, HIGH);
+                tiempoInicioEstado = millis();
+                estadoAuto = AUTO_ACTUADOR_ON;
             }
             break;
 
         case AUTO_FIN:
             estadoAuto = AUTO_IDLE;
-            break;
-    }
-}
-
-void ejecutarArrastreInicial() {
-    static unsigned long tiempoEspera = 0;
-    static bool pasoIniciado = false;
-
-    switch (estadoAI) {
-        case AI_IDLE:
-            break;
-
-        case AI_DESENROLLAR_INICIAL: //Se desenrolla la cuerda para colocarla en el vagon
-            if (!pasoIniciado){
-            
-                moverEnganchePasos(15,false);
-                pasoIniciado=true;
-            }
-            if (!engancheActivo){
-                pasoIniciado=false;
-                estadoAI=AI_ESPERAR_OPERADOR;
-            }
-            
-            break;
-
-        case AI_ESPERAR_OPERADOR:
-            // Espera comando de confirmación del operador por Serial de que el gancho ha sido colocado
-            if (comando == "enganche_listo") {
-                comando = ""; // Limpiar comando
-                estadoAI = AI_ENROLLAR;
-            }
-            break;
-
-        case AI_ENROLLAR:
-            engancheDireccion = true;
-            engancheActivo = true;
-            if (digitalRead(sensorFinEnganche) || !engancheActivo) {
-                tiempoEspera = millis(); // Captura tiempo para el delay de 5s
-                estadoAI = AI_ESPERA_5S;
-                engancheActivo = false;
-            }
-            break;
-
-        case AI_ESPERA_5S:
-            // Espera de 5 segundos no bloqueante
-            if (millis() - tiempoEspera >= 5000) {
-                estadoAI = AI_DESENROLLAR_FINAL;
-            }
-            break;
-
-        case AI_DESENROLLAR_FINAL:
-            if (!pasoIniciado) {
-                moverEnganchePasos(4, false); 
-                pasoIniciado = true;
-            }
-            if (!engancheActivo) {
-                pasoIniciado = false;
-                estadoAI = AI_ESPERAR_DESACOPLE;
-            }
-            break;
-
-        case AI_ESPERAR_DESACOPLE:
-            // Espera confirmación manual de fin de desacople
-            if (comando == "enganche_desacoplado") {
-                comando = "";
-                estadoAI = AI_FIN;
-            }
-            break;
-
-        case AI_FIN:
-            estadoAI = AI_IDLE;
-            break;
-    }
-}
-
-void ejecutarArrastreVagon() {
-    static unsigned long tiempoEsperaVagon = 0;
-    double posicion_actuador = constrain(map(analogRead(pinLectura), 0, 665, 100, 0), 0, 100);
-
-    switch (estadoAV) {
-        case AV_IDLE:
-            pulsosSensor = 0;
-            break;
-
-        case AV_DESPLEGAR:
-            digitalWrite(pinActuador, HIGH); // Desplegar completo
-            
-            if (posicion_actuador >= 100) { //llego al final? (Alejandro del futuro: si no funciona lo bajamos a 98)
-                estadoAV = AV_RETRAER;
-            }
-            break;
-
-        case AV_RETRAER:
-            digitalWrite(pinActuador, LOW); // Retroceder
-            
-            
-            if (posicion_actuador <= 0) { //Regreso por completo (aqui igual xdxd)
-                estadoAV = AV_VERIFICAR;
-            }
-            break;
-
-        case AV_VERIFICAR:
-            static bool ultimoEstadoSensor = LOW;
-            bool estadoActualSensor = digitalRead(sensorFinEnganche);
-
-            // Fin de carrera cuenta los vagonesss
-            if (estadoActualSensor == HIGH && ultimoEstadoSensor == LOW) { 
-                pulsosSensor++;
-
-                if (pulsosSensor >= 2) {
-                    pulsosSensor = 0;
-                    vagonesTrasladados++; 
-                    
-                    if (vagonesTrasladados >= vagonesTotales) {
-                        tiempoEsperaVagon = millis(); 
-                        estadoAV = AV_ESPERA_5S;
-                        ultimoEstadoSensor = estadoActualSensor; // Actualizar antes de salir
-                        break; 
-                    }
-                }
-                estadoAV = AV_DESPLEGAR;
-            } 
-            // Si sigue en HIGH pero ya lo contamos, o si es LOW, no hacemos nada y seguimos esperando o empujando
-            else if (estadoActualSensor == LOW && ultimoEstadoSensor == HIGH) {
-                // El sensor se liberó, podemos prepararnos para la siguiente lectura
-                estadoAV = AV_DESPLEGAR;
-            }
-            
-            ultimoEstadoSensor = estadoActualSensor; // Guardar estado para el próximo ciclo
-            break;
-
-        case AV_ESPERA_5S:
-            if (millis() - tiempoEsperaVagon >= 5000) {
-                estadoAV = AV_FIN;
-            }
-            break;
-
-        case AV_FIN:
-            // Mantiene el actuador bloqueado
-            digitalWrite(pinActuador, LOW);
-            estadoAV=AV_IDLE;
             break;
     }
 }
